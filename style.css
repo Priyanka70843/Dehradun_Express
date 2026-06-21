@@ -1,0 +1,193 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+    background:linear-gradient(135deg,#0f172a,#1e293b,#334155);
+}
+
+/* Main Container */
+.container{
+    width:950px;
+    max-width:100%;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* Header */
+h1{
+    text-align:center;
+    padding:25px;
+    font-size:2rem;
+    color:#fff;
+    background:linear-gradient(90deg,#8b5cf6,#6366f1);
+    letter-spacing:1px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#cbd5e1;
+    padding:12px;
+    font-size:15px;
+    background:rgba(255,255,255,0.05);
+}
+
+/* Form Area */
+.train-card{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    padding:35px;
+}
+
+.input-group{
+    display:flex;
+    flex-direction:column;
+}
+
+label{
+    margin-bottom:10px;
+    color:#f8fafc;
+    font-size:14px;
+    font-weight:500;
+    letter-spacing:0.5px;
+}
+
+select{
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    background:rgba(255,255,255,0.12);
+    color:white;
+    font-size:15px;
+    outline:none;
+    transition:0.3s;
+}
+
+select:hover{
+    background:rgba(255,255,255,0.18);
+}
+
+select:focus{
+    box-shadow:0 0 0 3px rgba(139,92,246,0.4);
+}
+
+option{
+    color:black;
+}
+
+/* Button */
+button{
+    grid-column:1/-1;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(135deg,#8b5cf6,#6366f1);
+    color:white;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(99,102,241,0.4);
+}
+
+/* Output */
+#output{
+    padding:30px;
+}
+
+/* Result Card */
+.result-box{
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:18px;
+    padding:25px;
+}
+
+.result-box h2{
+    color:#a78bfa;
+    margin-bottom:20px;
+    text-align:center;
+}
+
+.info{
+    background:rgba(255,255,255,0.08);
+    padding:14px;
+    margin-bottom:12px;
+    border-radius:10px;
+    color:#f8fafc;
+    border-left:4px solid #8b5cf6;
+}
+
+/* Route Section */
+.route{
+    margin-top:25px;
+}
+
+.route h3{
+    text-align:center;
+    color:#c4b5fd;
+    margin-bottom:20px;
+}
+
+/* Station Design */
+.station{
+    width:85%;
+    margin:auto;
+    padding:14px;
+    text-align:center;
+    background:linear-gradient(135deg,#6366f1,#8b5cf6);
+    color:white;
+    border-radius:50px;
+    font-weight:600;
+    box-shadow:0 5px 15px rgba(99,102,241,0.3);
+}
+
+/* Route Connector */
+.arrow{
+    text-align:center;
+    font-size:24px;
+    color:#c4b5fd;
+    margin:10px 0;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    body{
+        padding:15px;
+    }
+
+    .train-card{
+        grid-template-columns:1fr;
+        padding:20px;
+    }
+
+    h1{
+        font-size:1.6rem;
+    }
+
+    .station{
+        width:100%;
+    }
+
+    button{
+        width:100%;
+    }
+}
