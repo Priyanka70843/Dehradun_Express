@@ -3,40 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dehradun Express Tracker</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Delhi - Dehradun Expressway</title>
+    <link rel="stylesheet" href="style1.css">
 </head>
 <body>
 
-    <div class="container">
+    <header class="hero">
+       
+        <div class="hero-content">
+            <h1> 🚅 Delhi - Dehradun Expressway</h1>
+            <p>Smart Route Finder</p>
+        </div>
+    </header>
 
-        <h1>🚆 Dehradun Express Tracker</h1>
+    <main class="content">
 
-        <div class="train-card">
+        <div class="container">
+
+            <h2 class="card-title">🔍 Find Your Route</h2>
 
             <div class="input-group">
-                <label>Source Station</label>
+                <label for="source">📍 Source City</label>
                 <select id="source">
-                    <option value="">Select Source Station</option>
+                    <option value="">Select Source</option>
                 </select>
             </div>
+
+            <button class="swap-btn" onclick="swapStations()">
+                🔄 Swap Route
+            </button>
 
             <div class="input-group">
-                <label>Destination Station</label>
+                <label for="destination">🏁 Destination City</label>
                 <select id="destination">
-                    <option value="">Select Destination Station</option>
+                    <option value="">Select Destination</option>
                 </select>
             </div>
 
-            <button onclick="findRoute()">
-                Track Train
+            <button class="track-btn" onclick="findRoute()">
+                Track Train 🚆
             </button>
+
+            <div id="output"></div>
+
+            <div class="footer-note">Fares &amp; timings are estimated for demo purposes only.</div>
 
         </div>
 
-        <div id="output"></div>
-
-    </div>
+    </main>
 
     <script src="script.js"></script>
 
